@@ -5,9 +5,9 @@
   <subtitle>just a cat</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="https://catcccc.github.io/"/>
   <updated>2019-04-02T11:56:05.696Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>https://catcccc.github.io/</id>
   
   <author>
     <name>ccc</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>vagrant基本指南</title>
-    <link href="http://yoursite.com/2019/04/:linux/vagrant%E5%9F%BA%E6%9C%AC%E6%8C%87%E5%8D%97/"/>
-    <id>http://yoursite.com/2019/04/:linux/vagrant基本指南/</id>
+    <link href="https://catcccc.github.io/2019/04/:linux/vagrant%E5%9F%BA%E6%9C%AC%E6%8C%87%E5%8D%97/"/>
+    <id>https://catcccc.github.io/2019/04/:linux/vagrant基本指南/</id>
     <published>2019-04-01T12:56:22.000Z</published>
     <updated>2019-04-02T11:56:05.696Z</updated>
     
@@ -34,12 +34,12 @@
     
     </summary>
     
-      <category term="linux" scheme="http://yoursite.com/categories/linux/"/>
+      <category term="linux" scheme="https://catcccc.github.io/categories/linux/"/>
     
     
-      <category term="vagrant" scheme="http://yoursite.com/tags/vagrant/"/>
+      <category term="vagrant" scheme="https://catcccc.github.io/tags/vagrant/"/>
     
-      <category term="虚拟机" scheme="http://yoursite.com/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
+      <category term="虚拟机" scheme="https://catcccc.github.io/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
     
   </entry>
   
