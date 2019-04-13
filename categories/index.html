@@ -433,7 +433,7 @@
           
 
   
-    <div class="comments" id="comments">
+    <div class="comments" id="gitalk-container">
     </div>
 
   
@@ -709,41 +709,42 @@
   
 
   
-  
-
-  
-
-<script src="//cdn.jsdelivr.net/npm/leancloud-storage@3/dist/av-min.js"></script>
-
 
 
   
+    
 
-<script src="//cdn.jsdelivr.net/npm/valine@1/dist/Valine.min.js"></script>
+  
+
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+
+
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
+
+
+  
+
+<script src="//cdn.jsdelivr.net/npm/js-md5@0/src/md5.min.js"></script>
 
 <script>
-  var GUEST = ['nick', 'mail', 'link'];
-  var guest = 'nick,mail,link';
-  guest = guest.split(',').filter(function(item) {
-    return GUEST.indexOf(item) > -1;
+  var gitalk = new Gitalk({
+    clientID: '2880ce8aa5589acd8226',
+    clientSecret: '0691d2f3029d97125469e92595f2422bde91d367',
+    repo: 'catcccc.github.io',
+    owner: 'catcccc',
+    admin: ['catcccc'],
+    id: md5(location.pathname),
+    
+      language: 'zh-CN',
+    
+    distractionFreeMode: 'true'
   });
-  new Valine({
-    el: '#comments',
-    verify: true,
-    notify: false,
-    appId: 'TSIPYqjE33YA8tMarmelIvlN-9Nh9j0Va',
-    appKey: 'EzAlaJlUHV3YyqdewfFvRj3o',
-    placeholder: 'Just',
-    avatar: 'mm',
-    meta: guest,
-    pageSize: '10' || 10,
-    visitor: true,
-    lang: 'zh-CN' || 'zh-cn'
-  });
+  gitalk.render('gitalk-container');
 </script>
-
-
-
 
   
 
