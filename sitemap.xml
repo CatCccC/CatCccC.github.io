@@ -9,13 +9,6 @@
   </url>
   
   <url>
-    <loc>https://wangccc.win/lib/three/README.html</loc>
-    
-    <lastmod>2019-10-31T12:47:36.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://wangccc.win/lib/three/package.json</loc>
     
     <lastmod>2019-10-31T12:47:36.000Z</lastmod>
@@ -24,6 +17,13 @@
   
   <url>
     <loc>https://wangccc.win/lib/three/renovate.json</loc>
+    
+    <lastmod>2019-10-31T12:47:36.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangccc.win/lib/three/README.html</loc>
     
     <lastmod>2019-10-31T12:47:36.000Z</lastmod>
     
