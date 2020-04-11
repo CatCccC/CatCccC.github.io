@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wangccc.win/"/>
-  <updated>2019-10-31T12:37:04.000Z</updated>
+  <updated>2020-04-11T12:51:07.474Z</updated>
   <id>https://wangccc.win/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>openwrt-passwall-setting</title>
+    <link href="https://wangccc.win/linux/openwrt-passwall-setting/"/>
+    <id>https://wangccc.win/linux/openwrt-passwall-setting/</id>
+    <published>2020-01-01T12:00:26.000Z</published>
+    <updated>2020-04-11T12:51:07.474Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h3><ol><li>r2s nano pi</li><li>固件 <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2tsZXZlcjE5ODgvbmFub3BpLW9wZW53cnQ=" title="https://github.com/klever1988/nanopi-openwrt">r2s mini 固件<i class="fa fa-external-link"></i></span> </li><li>passwall 启用socks节点</li></ol><h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><p>由于passwall，无法设置socks5 的账户密码，可能存在一个安全问题。在实际过程中，通过4G访问公网IP的socks5代理。发现可以连通并且科学上网。</p><p>可能被爬虫爬取，被滥用，可能会被运营商断网。。。。</p><h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3><p>防火墙-&gt; 通信规则-&gt;添加规则  所有来自wan 区域的2333 端口的访问 丢弃入站</p>]]></content>
+    
+    <summary type="html">
+    
+      在使用passwall，外出学习过程中发现一个，socks5，外网访问的问题
+    
+    </summary>
+    
+      <category term="linux" scheme="https://wangccc.win/categories/linux/"/>
+    
+    
+      <category term="软路由" scheme="https://wangccc.win/tags/%E8%BD%AF%E8%B7%AF%E7%94%B1/"/>
+    
+      <category term="科学上网" scheme="https://wangccc.win/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"/>
+    
+  </entry>
   
   <entry>
     <title>Java 多数据源demo</title>

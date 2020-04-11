@@ -21,16 +21,20 @@
     var CONFIG = {"hostname":"wangccc.win","root":"/","scheme":"Mist","version":"7.7.2","exturl":true,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false,"dimmer":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="keywords" content="java,linux,jvm">
-<meta property="og:type" content="website">
-<meta property="og:title" content="^ↀᴥↀ^">
-<meta property="og:url" content="https://wangccc.win/categories/java/index.html">
+  <meta name="description" content="在使用passwall，外出学习过程中发现一个，socks5，外网访问的问题">
+<meta name="keywords" content="软路由,科学上网">
+<meta property="og:type" content="article">
+<meta property="og:title" content="openwrt-passwall-setting">
+<meta property="og:url" content="https://wangccc.win/linux/openwrt-passwall-setting/index.html">
 <meta property="og:site_name" content="^ↀᴥↀ^">
+<meta property="og:description" content="在使用passwall，外出学习过程中发现一个，socks5，外网访问的问题">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-04-11T12:51:07.474Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="^ↀᴥↀ^">
+<meta name="twitter:title" content="openwrt-passwall-setting">
+<meta name="twitter:description" content="在使用passwall，外出学习过程中发现一个，socks5，外网访问的问题">
 
-<link rel="canonical" href="https://wangccc.win/categories/java/">
+<link rel="canonical" href="https://wangccc.win/linux/openwrt-passwall-setting/">
 
 
 <script id="page-configurations">
@@ -38,12 +42,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>分类: java | ^ↀᴥↀ^</title>
+  <title>openwrt-passwall-setting | ^ↀᴥↀ^</title>
   
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-148352963-1"></script>
     <script>
@@ -2732,7 +2736,7 @@ hr {
   </style>
 </noscript>
 
-<script>function loadCss(l){var d=document,h=d.head,s=d.createElement('link');s.rel='stylesheet';s.href=l;!function e(f){if (d.body)return f();setTimeout(function(){e(f)})}(function(){h.appendChild(s);});}loadCss('/style.css');loadCss('//cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css');loadCss('//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css');</script><noscript><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css"><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css"></noscript></head>
+<script>function loadCss(l){var d=document,h=d.head,s=d.createElement('link');s.rel='stylesheet';s.href=l;!function e(f){if (d.body)return f();setTimeout(function(){e(f)})}(function(){h.appendChild(s);});}loadCss('//cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css');loadCss('//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css');loadCss('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css');</script><noscript><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css"><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css"><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"></noscript></head>
 
 <body itemscope="" itemtype="http://schema.org/WebPage">
   <div class="container use-motion">
@@ -2839,55 +2843,151 @@ hr {
         <div class="content-wrap">
           
 
-          <div class="content category">
+          <div class="content post">
             
 
+  <div class="posts-expand">
+      
   
   
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <h2 class="collection-header">java
-          <small>分类</small>
-        </h2>
-      </div>
+  <article itemscope="" itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://wangccc.win/linux/openwrt-passwall-setting/">
+
+    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="cheng">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="^ↀᴥↀ^">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          openwrt-passwall-setting
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-01-01 20:00:26" itemprop="dateCreated datePublished" datetime="2020-01-01T20:00:26+08:00">2020-01-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-04-11 20:51:07" itemprop="dateModified" datetime="2020-04-11T20:51:07+08:00">2020-04-11</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/linux/" itemprop="url" rel="index"><span itemprop="name">linux</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>190</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 ≈</span>
+              <span>1 分钟</span>
+            </span>
+            <div class="post-description">在使用passwall，外出学习过程中发现一个，socks5，外网访问的问题</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2019</span>
+        <h3 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h3><ol>
+<li>r2s nano pi</li>
+<li>固件 <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2tsZXZlcjE5ODgvbmFub3BpLW9wZW53cnQ=" title="https://github.com/klever1988/nanopi-openwrt">r2s mini 固件<i class="fa fa-external-link"></i></span> </li>
+<li>passwall 启用socks节点</li>
+</ol>
+<h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><p>由于passwall，无法设置socks5 的账户密码，可能存在一个安全问题。在实际过程中，通过4G访问公网IP的socks5代理。发现可以连通并且科学上网。</p>
+<p>可能被爬虫爬取，被滥用，可能会被运营商断网。。。。</p>
+<h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3><p>防火墙-&gt; 通信规则-&gt;添加规则  所有来自wan 区域的2333 端口的访问 丢弃入站</p>
+
     </div>
 
-  <article itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
+    
+    
+    
+        
 
-      <div class="post-meta">
-        <time itemprop="dateCreated" datetime="2019-04-14T20:14:26+08:00" content="2019-04-14">
-          04-14
-        </time>
-      </div>
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>cheng
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://wangccc.win/linux/openwrt-passwall-setting/" title="openwrt-passwall-setting">https://wangccc.win/linux/openwrt-passwall-setting/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
 
-      <div class="post-title">
-          <a class="post-title-link" href="/java/java多数据源项目/" itemprop="url">
-            <span itemprop="name">Java 多数据源demo</span>
-          </a>
-      </div>
 
-    </header>
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/软路由/" rel="tag"># 软路由</a>
+              <a href="/tags/科学上网/" rel="tag"># 科学上网</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/java/java多数据源项目/" rel="prev" title="Java 多数据源demo">
+      <i class="fa fa-chevron-left"></i> Java 多数据源demo
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
   </article>
+  
+  
+  
 
-    </div>
   </div>
-  
-  
-  
-
-  
-
 
 
           </div>
           
+    <div class="comments" id="gitalk-container"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -2934,6 +3034,7 @@ hr {
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前提"><span class="nav-number">1.</span> <span class="nav-text">前提</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题"><span class="nav-number">2.</span> <span class="nav-text">问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解决"><span class="nav-number">3.</span> <span class="nav-text">解决</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -3081,6 +3182,9 @@ hr {
 
 
 
+
+
+
 <script type="text/javascript" src="/bundle.js"></script><script type="text/javascript">
     (function(){
       var bp = document.createElement('script');
@@ -3108,5 +3212,22 @@ document.querySelectorAll('.pdfobject-container').forEach(element => {
   } else {
     element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
   }
+});
+;
+
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : '2880ce8aa5589acd8226',
+      clientSecret: '0691d2f3029d97125469e92595f2422bde91d367',
+      repo        : 'catcccc.github.io',
+      owner       : 'catcccc',
+      admin       : ['CatCccC'],
+      id          : 'b52d73175089b7f232f112b026ea7eda',
+        language: 'zh-CN',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
 });
 </script></body></html>

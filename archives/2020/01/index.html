@@ -24,13 +24,13 @@
   <meta name="keywords" content="java,linux,jvm">
 <meta property="og:type" content="website">
 <meta property="og:title" content="^ↀᴥↀ^">
-<meta property="og:url" content="https://wangccc.win/categories/java/index.html">
+<meta property="og:url" content="https://wangccc.win/archives/2020/01/index.html">
 <meta property="og:site_name" content="^ↀᴥↀ^">
 <meta property="og:locale" content="zh-CN">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="^ↀᴥↀ^">
 
-<link rel="canonical" href="https://wangccc.win/categories/java/">
+<link rel="canonical" href="https://wangccc.win/archives/2020/01/">
 
 
 <script id="page-configurations">
@@ -43,7 +43,7 @@
   };
 </script>
 
-  <title>分类: java | ^ↀᴥↀ^</title>
+  <title>归档 | ^ↀᴥↀ^</title>
   
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-148352963-1"></script>
     <script>
@@ -2839,7 +2839,7 @@ hr {
         <div class="content-wrap">
           
 
-          <div class="content category">
+          <div class="content archive">
             
 
   
@@ -2848,33 +2848,32 @@ hr {
   <div class="post-block">
     <div class="posts-collapse">
       <div class="collection-title">
-        <h2 class="collection-header">java
-          <small>分类</small>
-        </h2>
+        <span class="collection-header">嗯..! 目前共计 3 篇日志。 继续努力。</span>
       </div>
 
       
     <div class="collection-year">
-      <span class="collection-header">2019</span>
+      <span class="collection-header">2020</span>
     </div>
 
   <article itemscope="" itemtype="http://schema.org/Article">
     <header class="post-header">
 
       <div class="post-meta">
-        <time itemprop="dateCreated" datetime="2019-04-14T20:14:26+08:00" content="2019-04-14">
-          04-14
+        <time itemprop="dateCreated" datetime="2020-01-01T20:00:26+08:00" content="2020-01-01">
+          01-01
         </time>
       </div>
 
       <div class="post-title">
-          <a class="post-title-link" href="/java/java多数据源项目/" itemprop="url">
-            <span itemprop="name">Java 多数据源demo</span>
+          <a class="post-title-link" href="/linux/openwrt-passwall-setting/" itemprop="url">
+            <span itemprop="name">openwrt-passwall-setting</span>
           </a>
       </div>
 
     </header>
   </article>
+
 
     </div>
   </div>
@@ -3077,6 +3076,8 @@ hr {
   
 
   
+  <script src="//cdn.jsdelivr.net/npm/quicklink@1/dist/quicklink.umd.js"></script>
+  
 
 
 
@@ -3109,4 +3110,13 @@ document.querySelectorAll('.pdfobject-container').forEach(element => {
     element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
   }
 });
-</script></body></html>
+;
+
+      window.addEventListener('load', () => {
+      quicklink({
+        timeout : 3000,
+        priority: true,
+        ignores : [uri => uri.includes('#'),uri => uri === 'https://wangccc.win/archives/2020/01/',]
+      });
+      });
+  </script></body></html>

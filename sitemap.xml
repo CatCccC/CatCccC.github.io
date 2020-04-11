@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wangccc.win/linux/openwrt-passwall-setting/</loc>
+    
+    <lastmod>2020-04-11T12:51:07.474Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://wangccc.win/linux/vagrant%E5%9F%BA%E6%9C%AC%E6%8C%87%E5%8D%97/</loc>
     
     <lastmod>2020-03-25T11:04:56.953Z</lastmod>
@@ -9,14 +16,7 @@
   </url>
   
   <url>
-    <loc>https://wangccc.win/lib/three/package.json</loc>
-    
-    <lastmod>2019-10-31T12:47:36.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangccc.win/lib/three/renovate.json</loc>
+    <loc>https://wangccc.win/lib/three/package-lock.json</loc>
     
     <lastmod>2019-10-31T12:47:36.000Z</lastmod>
     
@@ -30,7 +30,14 @@
   </url>
   
   <url>
-    <loc>https://wangccc.win/lib/three/package-lock.json</loc>
+    <loc>https://wangccc.win/lib/three/renovate.json</loc>
+    
+    <lastmod>2019-10-31T12:47:36.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangccc.win/lib/three/package.json</loc>
     
     <lastmod>2019-10-31T12:47:36.000Z</lastmod>
     
@@ -58,14 +65,14 @@
   </url>
   
   <url>
-    <loc>https://wangccc.win/categories/index.html</loc>
+    <loc>https://wangccc.win/tags/index.html</loc>
     
     <lastmod>2019-10-31T12:37:04.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://wangccc.win/tags/index.html</loc>
+    <loc>https://wangccc.win/categories/index.html</loc>
     
     <lastmod>2019-10-31T12:37:04.000Z</lastmod>
     
