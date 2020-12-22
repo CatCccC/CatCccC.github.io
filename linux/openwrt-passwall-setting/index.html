@@ -8,7 +8,6 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
   <link rel="mask-icon" href="/images/logo.svg" color="#222">
   <meta name="google-site-verification" content="iwxyQWgid5_lwwefx1WWYhD5N5Aj7lqbF4Domhesjk8">
-  <meta name="baidu-site-verification" content="7WJDapxnPn">
 
 
 
@@ -18,7 +17,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"wangccc.win","root":"/","scheme":"Mist","version":"7.7.2","exturl":true,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false,"dimmer":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"wangccc.win","root":"/","scheme":"Mist","version":"7.8.0","exturl":true,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false,"dimmer":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="在使用passwall，外出学习过程中发现一个，socks5，外网访问的问题">
@@ -69,6 +68,7 @@
   --content-bg-color: #f5f5f5;
   --card-bg-color: #f5f5f5;
   --text-color: #555;
+  --blockquote-color: #666;
   --link-color: #555;
   --link-hover-color: #222;
   --brand-color: #222;
@@ -82,6 +82,34 @@
   --btn-default-hover-bg: transparent;
   --btn-default-hover-color: var(--link-hover-color);
   --btn-default-hover-border-color: var(--link-hover-color);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --body-bg-color: #282828;
+    --content-bg-color: #333;
+    --card-bg-color: #555;
+    --text-color: #ccc;
+    --blockquote-color: #bbb;
+    --link-color: #ccc;
+    --link-hover-color: #eee;
+    --brand-color: #ddd;
+    --brand-hover-color: #ddd;
+    --table-row-odd-bg-color: #282828;
+    --table-row-hover-bg-color: #363636;
+    --menu-item-bg-color: #555;
+    --btn-default-bg: #222;
+    --btn-default-color: #ccc;
+    --btn-default-border-color: #555;
+    --btn-default-hover-bg: #666;
+    --btn-default-hover-color: #ccc;
+    --btn-default-hover-border-color: #666;
+  }
+  img {
+    opacity: 0.75;
+  }
+  img:hover {
+    opacity: 0.9;
+  }
 }
 html {
   line-height: 1.15; /* 1 */
@@ -233,7 +261,7 @@ template {
 }
 ::selection {
   background: #262a30;
-  color: #fff;
+  color: #eee;
 }
 html,
 body {
@@ -315,7 +343,7 @@ hr {
 }
 blockquote {
   border-left: 4px solid #ddd;
-  color: #666;
+  color: var(--blockquote-color);
   margin: 0;
   padding: 0 15px;
 }
@@ -362,7 +390,6 @@ th,
 td {
   font-weight: normal;
   padding: 8px;
-  text-align: left;
   vertical-align: middle;
 }
 th,
@@ -635,27 +662,20 @@ pre .javascript .function {
   position: relative;
   text-align: center;
 }
-.blockquote-center::before,
-.blockquote-center::after {
-  background-repeat: no-repeat;
-  background-size: 22px 22px;
-  content: ' ';
+.blockquote-center .fa {
   display: block;
-  height: 24px;
-  opacity: 0.2;
+  opacity: 0.6;
   position: absolute;
   width: 100%;
 }
-.blockquote-center::before {
-  background-image: url("../images/quote-l.svg");
-  background-position: 0 -6px;
+.blockquote-center .fa-quote-left {
   border-top: 1px solid #ccc;
+  text-align: left;
   top: -20px;
 }
-.blockquote-center::after {
-  background-image: url("../images/quote-r.svg");
-  background-position: 100% 8px;
+.blockquote-center .fa-quote-right {
   border-bottom: 1px solid #ccc;
+  text-align: right;
   bottom: -20px;
 }
 .blockquote-center p,
@@ -981,7 +1001,7 @@ pre .javascript .function {
   }
 }
 .comments {
-  margin: 60px 20px 0;
+  margin-top: 60px;
   overflow: hidden;
 }
 .comment-button-group {
@@ -1031,6 +1051,11 @@ pre .javascript .function {
 @media (min-width: 1600px) {
   .main-inner {
     width: 900px;
+  }
+}
+@media (max-width: 767px) {
+  .content-wrap {
+    padding: 0 20px;
   }
 }
 .header {
@@ -1170,7 +1195,10 @@ pre .javascript .function {
     border-bottom-color: transparent !important;
   }
 }
-.menu-item .fa {
+.menu-item .fa,
+.menu-item .fab,
+.menu-item .far,
+.menu-item .fas {
   margin-right: 8px;
 }
 .menu-item .badge {
@@ -1212,9 +1240,10 @@ pre .javascript .function {
 .book-mark-link::before {
   color: #222;
   content: '\f02e';
-  font-family: 'FontAwesome';
   font-size: 32px;
   line-height: 1;
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
 }
 .book-mark-link:hover,
 .book-mark-link-fixed {
@@ -1356,7 +1385,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #9d0894;
+  background: #63c655;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1375,7 +1404,10 @@ pre .javascript .function {
   display: inline-block;
   padding: 0 15px;
 }
-.sidebar-button a .fa {
+.sidebar-button a .fa,
+.sidebar-button a .fab,
+.sidebar-button a .far,
+.sidebar-button a .fas {
   margin-right: 5px;
 }
 .sidebar-button a:hover {
@@ -1383,7 +1415,10 @@ pre .javascript .function {
   border: 1px solid #fc6423;
   color: #fff;
 }
-.sidebar-button a:hover .fa {
+.sidebar-button a:hover .fa,
+.sidebar-button a:hover .fab,
+.sidebar-button a:hover .far,
+.sidebar-button a:hover .fas {
   color: #fff;
 }
 .links-of-blogroll {
@@ -1428,7 +1463,7 @@ pre .javascript .function {
 }
 .sidebar-nav li {
   border-bottom: 1px solid transparent;
-  color: #555;
+  color: #666;
   cursor: pointer;
   display: inline-block;
   font-size: 0.875em;
@@ -1657,6 +1692,68 @@ pre .javascript .function {
     transform: scale(1.1);
   }
 }
+@media (max-width: 567px) {
+  .content-wrap {
+    padding: initial !important;
+  }
+  .posts-expand .post-meta {
+    margin: 3px 0 10px 0 !important;
+  }
+  .post-block {
+    margin-top: initial !important;
+    padding: 8px 18px 8px !important;
+  }
+  .posts-collapse {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .post-body h1,
+  .post-body h2,
+  .post-body h3,
+  .post-body h4,
+  .post-body h5,
+  .post-body h6 {
+    margin: 10px 0 8px;
+  }
+  .post-body .note h1,
+  .post-body .tabs .tab-content .tab-pane h1,
+  .post-body .note h2,
+  .post-body .tabs .tab-content .tab-pane h2,
+  .post-body .note h3,
+  .post-body .tabs .tab-content .tab-pane h3,
+  .post-body .note h4,
+  .post-body .tabs .tab-content .tab-pane h4,
+  .post-body .note h5,
+  .post-body .tabs .tab-content .tab-pane h5,
+  .post-body .note h6,
+  .post-body .tabs .tab-content .tab-pane h6 {
+    margin: 0 5px;
+  }
+  .post-body > p {
+    margin: 0 0 10px 0;
+  }
+  .post-body .note > p,
+  .post-body .tabs .tab-content .tab-pane > p {
+    padding: 0 5px;
+  }
+  .post-body img,
+  .post-body video {
+    margin-bottom: 10px !important;
+  }
+  .post-body .note {
+    margin-bottom: 10px !important;
+    padding: 10px !important;
+  }
+  .post-body .tabs .tab-content .tab-pane {
+    padding: 10px 10px 0 10px !important;
+  }
+  .post-eof {
+    margin: 40px auto 20px !important;
+  }
+  .pagination {
+    margin-top: 40px;
+  }
+}
 .back-to-top {
   font-size: 12px;
   text-align: center;
@@ -1750,13 +1847,12 @@ pre .javascript .function {
 }
 .posts-collapse {
   margin-left: 35px;
-  margin-top: 35px;
   position: relative;
 }
 @media (max-width: 767px) {
   .posts-collapse {
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 0px;
+    margin-right: 0px;
   }
 }
 .posts-collapse .collection-title {
@@ -1795,6 +1891,7 @@ pre .javascript .function {
   width: 8px;
 }
 .posts-collapse .collection-header {
+  display: block;
   margin: 0 0 0 20px;
 }
 .posts-collapse .collection-header small {
@@ -1846,6 +1943,10 @@ pre .javascript .function {
   border-bottom: none;
   color: var(--link-color);
 }
+.posts-collapse .post-title .fa-external-link-alt {
+  font-size: 0.875em;
+  margin-left: 5px;
+}
 .posts-collapse::before {
   background: #f5f5f5;
   content: ' ';
@@ -1856,10 +1957,6 @@ pre .javascript .function {
   top: 1.25em;
   width: 4px;
 }
-.posts-collapse .fa-external-link {
-  font-size: 0.875em;
-  margin-left: 5px;
-}
 .post-eof {
   background: #ccc;
   height: 1px;
@@ -1867,16 +1964,11 @@ pre .javascript .function {
   text-align: center;
   width: 8%;
 }
-.post-block:last-child .post-eof {
+.post-block:last-of-type .post-eof {
   display: none;
 }
-.posts-expand {
+.content {
   padding-top: 40px;
-}
-@media (max-width: 767px) {
-  .posts-expand {
-    margin: 0 20px;
-  }
 }
 @media (min-width: 992px) {
   .post-body {
@@ -2001,7 +2093,7 @@ pre .javascript .function {
   transform: scaleX(1);
   visibility: visible;
 }
-.posts-expand .post-title-link .fa {
+.posts-expand .post-title-link .fa-external-link-alt {
   font-size: 0.875em;
   margin-left: 5px;
 }
@@ -2045,7 +2137,7 @@ pre .javascript .function {
   display: flex;
   justify-content: space-between;
   margin-top: 15px;
-  padding-top: 10px;
+  padding: 10px 5px 0;
 }
 .post-nav-item {
   flex: 1;
@@ -2066,18 +2158,12 @@ pre .javascript .function {
 .post-nav-item:first-child {
   margin-right: 15px;
 }
-.post-nav-item:first-child a {
-  padding-left: 5px;
-}
 .post-nav-item:first-child .fa {
   margin-right: 5px;
 }
 .post-nav-item:last-child {
   margin-left: 15px;
   text-align: right;
-}
-.post-nav-item:last-child a {
-  padding-right: 5px;
 }
 .post-nav-item:last-child .fa {
   margin-left: 5px;
@@ -2135,10 +2221,10 @@ pre .javascript .function {
   width: 90%;
 }
 .reward-container button {
-  background: #ff2a2a;
-  border: 0;
-  border-radius: 5px;
-  color: #fff;
+  background: transparent;
+  border: 1px solid #fc6423;
+  border-radius: 0;
+  color: #fc6423;
   cursor: pointer;
   line-height: 2;
   outline: 0;
@@ -2146,7 +2232,9 @@ pre .javascript .function {
   vertical-align: text-top;
 }
 .reward-container button:hover {
-  background: #f55;
+  background: #fc6423;
+  border: 1px solid transparent;
+  color: #fa9366;
 }
 #qr {
   padding-top: 20px;
@@ -2230,10 +2318,11 @@ pre .javascript .function {
   color: #fff;
   content: '\f111';
   display: inline-block;
-  font-family: 'FontAwesome';
   font-size: 10px;
   margin-right: 25px;
   vertical-align: middle;
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
 }
 .event-list .event .event-relative-time {
   color: #bbb;
@@ -2254,11 +2343,12 @@ pre .javascript .function {
 .event-list .event .event-details::before {
   color: #fff;
   display: inline-block;
-  font-family: 'FontAwesome';
   margin-right: 9px;
   text-align: center;
   text-indent: 0;
   width: 14px;
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
 }
 .event-list .event .event-details.event-location::before {
   content: '\f041';
@@ -2345,7 +2435,7 @@ ul.breadcrumb li + li:last-child {
   margin: 10px;
 }
 .tag-cloud a:hover {
-  color: #222 !important;
+  color: var(--link-hover-color) !important;
 }
 .gt-header a,
 .gt-comments a,
@@ -2492,8 +2582,8 @@ hr {
   }
 }
 .footer {
-  background: #f5f5f5;
-  color: #666;
+  background: var(--content-bg-color);
+  color: var(--text-color);
   padding: 10px 0;
 }
 .footer-inner {
@@ -2601,20 +2691,17 @@ hr {
   padding: 1px 4px;
   text-shadow: 1px 1px 0 rgba(0,0,0,0.1);
 }
-.posts-expand {
-  padding-top: 0;
-}
-.index .posts-expand .post-title,
-.index .posts-expand .post-meta {
+.posts-expand.index .post-title,
+.posts-expand.index .post-meta {
   text-align: left;
 }
 @media (max-width: 767px) {
-  .index .posts-expand .post-title,
-  .index .posts-expand .post-meta {
+  .posts-expand.index .post-title,
+  .posts-expand.index .post-meta {
     text-align: center;
   }
 }
-.index .posts-expand .post-meta {
+.posts-expand.index .post-meta {
   margin: 5px 0 20px 0;
 }
 .posts-expand .post-eof {
@@ -2752,7 +2839,7 @@ hr {
     </div>
   </div>
 
-  <div class="site-meta custom-logo">
+  <div class="site-meta">
 
     <a href="/" class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
@@ -2772,25 +2859,25 @@ hr {
 
 
 <nav class="site-nav">
-  <ul id="menu" class="menu">
+  <ul id="menu" class="main-menu menu">
         <li class="menu-item menu-item-home">
 
-    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+    <a href="/" rel="section"><i class="home fa-fw"></i>首页</a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+    <a href="/archives/" rel="section"><i class="archive fa-fw"></i>归档</a>
 
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+    <a href="/tags/" rel="section"><i class="tags fa-fw"></i>标签</a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+    <a href="/categories/" rel="section"><i class="th fa-fw"></i>分类</a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -2809,7 +2896,7 @@ hr {
     <i class="fa fa-search"></i>
   </span>
   <div class="search-input-container">
-    <input autocomplete="off" autocorrect="off" autocapitalize="off" placeholder="搜索..." spellcheck="false" type="search" class="search-input">
+    <input autocomplete="off" autocapitalize="off" placeholder="搜索..." spellcheck="false" type="search" class="search-input">
   </div>
   <span class="popup-btn-close">
     <i class="fa fa-times-circle"></i>
@@ -2843,11 +2930,10 @@ hr {
         <div class="content-wrap">
           
 
-          <div class="content post">
+          <div class="content post posts-expand">
             
 
-  <div class="posts-expand">
-      
+    
   
   
   <article itemscope="" itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
@@ -2870,7 +2956,7 @@ hr {
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
 
@@ -2878,14 +2964,14 @@ hr {
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
+                  <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2020-04-11 20:51:07" itemprop="dateModified" datetime="2020-04-11T20:51:07+08:00">2020-04-11</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
+                <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
@@ -2896,21 +2982,21 @@ hr {
           
             <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
               <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
+                <i class="eye"></i>
               </span>
               <span class="post-meta-item-text">阅读次数：</span>
               <span id="busuanzi_value_page_pv"></span>
             </span><br>
             <span class="post-meta-item" title="本文字数">
               <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
+                <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
               <span>190</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
+                <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 ≈</span>
               <span>1 分钟</span>
@@ -2928,7 +3014,7 @@ hr {
       
         <h3 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h3><ol>
 <li>r2s nano pi</li>
-<li>固件 <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2tsZXZlcjE5ODgvbmFub3BpLW9wZW53cnQ=" title="https://github.com/klever1988/nanopi-openwrt">r2s mini 固件<i class="fa fa-external-link"></i></span> </li>
+<li>固件 <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2tsZXZlcjE5ODgvbmFub3BpLW9wZW53cnQ=">r2s mini 固件<i class="fa fa-external-link-alt"></i></span> </li>
 <li>passwall 启用socks节点</li>
 </ol>
 <h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><p>由于passwall，无法设置socks5 的账户密码，可能存在一个安全问题。在实际过程中，通过4G访问公网IP的socks5代理。发现可以连通并且科学上网。</p>
@@ -2952,7 +3038,7 @@ hr {
     <a href="https://wangccc.win/linux/openwrt-passwall-setting/" title="openwrt-passwall-setting">https://wangccc.win/linux/openwrt-passwall-setting/</a>
   </li>
   <li class="post-copyright-license">
-    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
   </li>
 </ul>
 </div>
@@ -2982,7 +3068,6 @@ hr {
   
   
 
-  </div>
 
 
           </div>
@@ -3090,12 +3175,12 @@ hr {
   © 
   <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
-    <i class="fa fa-user"></i>
+    <i class="user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">cheng</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
-      <i class="fa fa-area-chart"></i>
+      <i class="fa fa-chart-area"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
     <span title="站点总字数">2k</span>
@@ -3114,7 +3199,7 @@ hr {
   <script async="" src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
     <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
       <span class="post-meta-item-icon">
-        <i class="fa fa-user"></i>
+        <i class="user"></i>
       </span>
       <span class="site-uv" title="总访客量">
         <span id="busuanzi_value_site_uv"></span>
@@ -3123,7 +3208,7 @@ hr {
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
       <span class="post-meta-item-icon">
-        <i class="fa fa-eye"></i>
+        <i class="eye"></i>
       </span>
       <span class="site-pv" title="总访问量">
         <span id="busuanzi_value_site_pv"></span>
@@ -3156,7 +3241,6 @@ hr {
 
 
   
-  
 
 
 
@@ -3186,15 +3270,6 @@ hr {
 
 
 <script type="text/javascript" src="/bundle.js"></script><script type="text/javascript">
-    (function(){
-      var bp = document.createElement('script');
-      var curProtocol = window.location.protocol.split(':')[0];
-      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(bp, s);
-    })();
-  ;
-
 document.querySelectorAll('.pdfobject-container').forEach(element => {
   let url = element.dataset.target;
   let pdfOpenParams = {
